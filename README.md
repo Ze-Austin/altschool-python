@@ -6,7 +6,7 @@ This is a repository containing all notes and files created while learning to wo
 
 **Caveat:** I use a MacBook, so the notes and files about installation and features might differ from what would apply to your computer. Trust [LMS](https://thealtschool.com/courses/backend-engineering-second-semesterpython), Live Classes and [Google](https://google.com) for a better-tailored experience.
 
-If you like this structure and want to use it for your own notes, follow these steps: 
+If you like this structure and want to use it for your own notes or just read through for tips and practice, follow these steps: 
 
 1. Fork this original repo on GitHub
 2. Clone from your personal GitHub into the folder you use for AltSchool or Programming on your computer:  
