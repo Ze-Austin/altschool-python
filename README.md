@@ -30,4 +30,4 @@ If you like this structure and want to use it for your own notes, follow these s
 10. Get my weekly updates by pulling from the upstream:  
     `git pull upstream main`
 
-Timeline: I usually update this with the week's LMS content by Wednesday evening. Caleb's folder (and any other Flask tutor's) will be updated when they drop files on Slack.
+Timeline: I usually update this with notes and files from the week's LMS content by Wednesday evening. Caleb's folder (and any other Flask tutor's) will be updated when they drop files on Slack.
