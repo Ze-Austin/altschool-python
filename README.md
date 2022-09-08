@@ -7,7 +7,8 @@ This is a repository containing all notes and files created while learning to wo
 If you like this structure and want to use it for your own notes, follow these steps: 
 
 1. Fork this original repo on GitHub
-2. Clone from your personal GitHub into the folder you use for AltSchool or Programming on your computer: `git clone https://github.com/YourGitHubUsername/altschool-python`
+2. Clone from your personal GitHub into the folder you use for AltSchool or Programming on your computer:
+    `git clone https://github.com/YourGitHubUsername/altschool-python`
 3. CD into the cloned folder: `cd altschool-python`
 4. Add upstream, which links to original GitHub repo: git remote add upstream `https://github.com/Ze-Austin/altschool-python`
 5. Create and move into a new branch (preferably using your name or GitHub username for this repo): git checkout -b YourName
