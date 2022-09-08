@@ -1,0 +1,3 @@
+Hello. This is a test.
+
+Learning how to use Nano in the terminal.

@@ -1,0 +1,15 @@
+Install Fig, which gives the best autocomplete experience in the Terminal:
+    https://fig.io
+
+Go through this 'Command Line Power User' YouTube playlist by Wes Bos:
+    https://youtube.com/playlist?list=PLu8EoSxDXHP7tXPJp5ZmUpuT7sFvrswzf
+
+Note: Wes Bos didn't use Fig in the playlist. Fig would have drastically simplified and improved his autocomplete experience there
+
+Get used to manipulating the .zshrc file to customize the Terminal. On Mac, open it in VSCode with:
+    code ~/.zshrc
+
+If you choose to install https://github.com/sindresorhus/trash and https://github.com/sindresorhus/trash-cli as suggested by Wes Bos, you can prevent rm from permanently deleting files by typing trash as an alias for rm in the .zshrc file. This sends all deleted files to the bin, even if you type rm instead of trash:
+    alias rm="trash"
+
+Note: this alias doesn't work if you're working in a cloud storage directory, like OneDrive. These services automatically store files deleted via rm in their online bin anyway.
