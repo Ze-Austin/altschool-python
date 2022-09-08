@@ -10,7 +10,7 @@ If you like this structure and want to use it for your own notes, follow these s
 2. Clone from your personal GitHub into the folder you use for AltSchool or Programming on your computer:  
     `git clone https://github.com/YourGitHubUsername/altschool-python`
 4. CD into the cloned folder: `cd altschool-python`
-5. Add upstream, which links to original GitHub repo:  
+5. Add an upstream, which links to the original GitHub repo:  
   `git remote add upstream https://github.com/Ze-Austin/altschool-python`
 6. Create and move into a new branch (preferably using your name or GitHub username for this repo): `git checkout -b YourName`
 7. Open the folder in your IDE to make your own notes. For VSCode: `code .`
@@ -20,6 +20,6 @@ If you like this structure and want to use it for your own notes, follow these s
     - Alternatively, you can add and commit at once: `git commit -am 'message here'`
 9. Push changes to your branch: `git push origin branchname`
 10. This is where you'll usually create a pull request on GitHub, but please don't. There's no point in merging everyone's personal notes. But *it would be nice to see everyone's name in the branch list*
-11. Get my weekly updates by pulling from the upstream remote: `git pull upstream main`
+11. Get my weekly updates by pulling from the upstream: `git pull upstream main`
 
 Timeline: I usually update this with the week's LMS content by Wednesday evening. Caleb's folder (and any other Flask tutor's) will be updated when they drop files on Slack.
