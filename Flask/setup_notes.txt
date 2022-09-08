@@ -21,7 +21,7 @@ Copy the link created in the terminal and paste it in a browser to open the proj
 
 Press CTRL C to quit running the project on the server
 
-To deactivate Flask in the Terminal:
+To deactivate Flask in the Terminal: 
     deactivate
 
 Store the requirements in a text file, so that others can run the same code easily:
