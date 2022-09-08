@@ -10,8 +10,9 @@ If you like this structure and want to use it for your own notes, follow these s
 2. Clone from your personal GitHub into the folder you use for AltSchool or Programming on your computer:  
     `git clone https://github.com/YourGitHubUsername/altschool-python`
 4. CD into the cloned folder: `cd altschool-python`
-5. Add upstream, which links to original GitHub repo: git remote add upstream `https://github.com/Ze-Austin/altschool-python`
-6. Create and move into a new branch (preferably using your name or GitHub username for this repo): git checkout -b YourName
+5. Add upstream, which links to original GitHub repo:  
+  `git remote add upstream https://github.com/Ze-Austin/altschool-python`
+6. Create and move into a new branch (preferably using your name or GitHub username for this repo): `git checkout -b YourName`
 7. Open the folder in your IDE to make your own notes. For VSCode: `code .`
 8. When you're done for the session, or just want to save it online:
     - Stage your changes on git by adding them: `git add .` or `git add file.name`
