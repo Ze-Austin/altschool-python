@@ -39,4 +39,8 @@ If you like this structure and want to use it for your own notes or just go thro
 13. Every time you want to work on this repo, ensure that you've checked out into your branch to freely make/edit your notes without affecting others:  
     `git checkout branchname`
 
-Timeline: I usually update this with notes and files from the week's LMS content by Wednesday evening. Caleb's folder (and any other Flask tutor's) will be updated when they drop files on Slack.
+**Timeline:** I usually update my branch (main) with notes and files from the week's LMS content by Wednesday evening. Caleb's folder (and any other Flask tutor's) will be updated when they drop files on Slack.
+
+**Bonus:** There's a Git Cheat Sheet file in here. It helps with reminders and explanations of Git commands in the Terminal. Further explanation can be found online.
+
+## Thanks for dropping by. Have fun! :snake:
