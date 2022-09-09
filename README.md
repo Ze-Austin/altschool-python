@@ -33,7 +33,7 @@ If you like this structure and want to use it for your own notes or just go thro
         `git commit -am 'message here'`
 10. Push the changes to your branch:  
     `git push origin branchname`
-11. This is when you'll usually create a pull request on GitHub, but please don't. There's no point in merging everyone's personal notes, yet *it would be nice to see your name in the branch list* :revolving_hearts:
+11. This is when you'll usually create a pull request on GitHub, but please don't. There's no point in merging everyone's personal notes
 12. Get my weekly updates by pulling from the upstream:  
     `git pull upstream main`
 
