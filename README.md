@@ -31,10 +31,12 @@ If you like this structure and want to use it for your own notes or just go thro
         `git commit -m 'message here'`
     - Alternatively, you can add and commit at once:  
         `git commit -am 'message here'`
-10. Push the changes to your branch:  
+10. Push the changes to *your branch*:  
     `git push origin branchname`
 11. This is when you'll usually create a pull request on GitHub, but please don't. There's no point in merging everyone's personal notes
 12. Get my weekly updates by pulling from the upstream:  
     `git pull upstream main`
+13. Every time you want to work on this repo, ensure that you've checked out into your branch to freely make/edit your notes without affecting others:  
+    `git checkout branchname`
 
 Timeline: I usually update this with notes and files from the week's LMS content by Wednesday evening. Caleb's folder (and any other Flask tutor's) will be updated when they drop files on Slack.
