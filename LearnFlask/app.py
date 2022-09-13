@@ -5,7 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello world!'
+    return "Hello world!"
 
-if __name__ == '__main__':
+@app.route('/about')
+def about():
+    return "I am learning Flask with AltSchool."
+
+if __name__ == "__main__":
     app.run()
