@@ -20,13 +20,16 @@ Then install Flask in the project:
 After creating the .py file and coding the project, set FLASK_APP environment variable to the file name:
     export FLASK_APP=projectfilename.py
 
-Activate debug mode, but only for development. Debug mode must be deactivated in production:
+Activate debug mode, but only for development. Debug mode must be deactivated in production. There are two ways to activate debug mode:
+1. Within the .py file in the editor (preferred):
+    app.run(debug=True)
+2. Within the terminal:
     export FLASK_DEBUG=True
 
 Run flask:
     flask run
 
-Copy the link created in the terminal and paste it in a browser to open the project on a local server
+Copy the link created in the terminal and paste it in a browser to open the project on a local(development) server
 
 Press CTRL C to quit running the project on the server
 
