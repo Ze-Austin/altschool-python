@@ -17,7 +17,7 @@ Activate the environment:
 Then install Flask in the project:
     pip install flask
 
-After creating the .py file(s) and coding the project, export FLASK_APP to the .py file:
+After creating the .py file and coding the project, set FLASK_APP environment variable to the file name:
     export FLASK_APP=projectfilename.py
 
 Activate debug mode, but only for development. Debug mode must be deactivated in production:
