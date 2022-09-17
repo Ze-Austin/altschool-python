@@ -24,9 +24,9 @@ def post_id(id):
     return f"This post has an ID of {id}"
 
 # Live Class task
-@app.route('/<name>/<birthmonth>/<int:birthday>')
-def birthday(name, birthmonth, birthday):
-    return f"{name} was born on {birthmonth} {birthday}."
+@app.route('/<name>/<birthmonth>/<int:birth_day>')
+def birthday(name, birthmonth, birth_day):
+    return f"{name} was born on {birthmonth} {birth_day}."
 
 if __name__ == "__main__":
     app.run(debug=True)
