@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Demo</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        th{
+            width: 200px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        .form{
+            width:50%;
+            margin: auto;
+        }
+        .form input{
+            width: 100%;
+        }
+        .form select{
+            width: 100%;
+        }
+        td{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Database Demo</h1>
+    <div class="form">
+        <form action="{{url_for('create_user')}}" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <br>
+            <br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <br>
+            <br>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age">
+            <br>
+            <br>
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="other">Other</option>
+                <option value="rather_not_say">Rather Not Say</option>
+            </select>
+            <br>
+            <br>
+            <button type="submit">Save</button>
+        </form>
+
+        <br>
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>
+                        <a href="/">Update</a> <a href="/">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
