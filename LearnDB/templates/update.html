@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Database</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body {
+          margin: 0;
+          text-align: center;
+          background-color: #eee;
+          color: midnightblue;
+          font-size: 20px;
+        }
+        .container {
+          width: 50%;
+          margin: auto;
+        }
+        .container input {
+          width: 100%;
+        }
+        .container select {
+          width: 100%;
+        }
+        button {
+          background-color: midnightblue;
+          color: floralwhite;
+          padding: 5px 20px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: blue;
+          transition: 0.3s;
+        }
+        @media (max-width: 840px) {
+          .container {
+            width: 100%;
+            padding: 1rem;
+          }
+        }
+      </style>
+</head>
+<body>
+    <h1>Update</h1>
+    <div class="container">
+        <form action="/update/{{user.id}}/" method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" value="{{user.username}}">
+            <br />
+            <br />
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" value="{{user.email}}">
+            <br />
+            <br />
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" value="{{user.age}}">
+            <br />
+            <br />
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+                <option value="{{user.gender}}" selected>{{user.gender}}</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Nonbinary">Nonbinary</option>
+                <option value="Not Said">Rather Not Say</option>
+            </select>
+            <br />
+            <br />
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>
