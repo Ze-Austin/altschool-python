@@ -106,7 +106,10 @@
               <td>{{user.email}}</td>
               <td>{{user.age}}</td>
               <td>{{user.gender}}</td>
-              <td><a href="/update/{{user.id}}/">Update</a> <a href="/delete/{{user.id}}">Delete</a></td>
+              <td>
+                <a href="/update/{{user.id}}/">Update</a>
+                <a href="/delete/{{user.id}}">Delete</a>
+              </td>
             </tr>
             {% endfor %}
           </tbody>
