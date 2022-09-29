@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename= 'css/main.css')}}"
+    />
+    <title>Login Example</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href=""><h2>App Name</h2></a>
+      </div>
+      <div class="nav-item">
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('register')}}">Signup</a>
+        <a href="{{url_for('login')}}">Login</a>
+        <a href="{{url_for('logout')}}">Logout</a>
+      </div>
+    </header>
+    <main class="container">{% block content %} {% endblock content %}</main>
+    <footer>
+      <p class="footer">
+        &copy; AppName
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </footer>
+  </body>
+</html>
