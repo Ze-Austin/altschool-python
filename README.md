@@ -34,12 +34,23 @@ If you like this structure and want to use it for your own notes or just go thro
 10. Push the changes to *your branch*:  
     `git push origin branchname`
 11. This is when you'll usually create a pull request on GitHub, but please don't. There's no point in merging everyone's personal notes
-12. Get my weekly updates by pulling from the upstream:  
-    `git pull upstream main`
-13. Every time you want to work on this repo, ensure that you've checked out into your branch to freely make/edit your notes without affecting others:  
+12. Update your workflow with my weekly updates by following these steps in order:  
+    - Move into main:  
+        `git checkout main`
+    - Update main with changes from my GitHub repo (upstream):  
+        `git pull upstream main`
+    - Push my changes to your forked GitHub repo (origin), for online storage:  
+        `git push origin main`
+    - Move into your named branch:  
+        `git checkout branchname`
+    - Update your named branch with changes from main:  
+        `git merge main`
+    - Make any changes you want to, then return to Steps 9 & 10.
+
+**Note:** Every time you want to work on this repo, ensure that you've checked out into your branch to freely make/edit your notes without affecting others:  
     `git checkout branchname`
 
-**Timeline:** I usually update my branch (main) with notes and files from the week's LMS content by Wednesday evening. Caleb's folder (and any other Flask tutor's) will be updated when they drop files on Slack.
+**Timeline:** I usually update this repo some hours after the latest class, and then announce on Slack. Caleb's (and any other Python tutor's) folder will be updated when we get the files on Slack.
 
 **Bonus:** There's a Git Cheat Sheet file in here. It helps with reminders and explanations of Git commands in the Terminal. Further explanation can be found online.
 
