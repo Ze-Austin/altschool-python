@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import login_user
+from flask_login import login_user, logout_user, login_required, LoginManager, UserMixin
 import os
 
 base_dir = os.path.dirname(os.path.realpath(__file__))
@@ -10,11 +10,24 @@ app = Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(base_dir, 'my_login.db')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["SECRET_KEY"] = '5e0b18fd5de07e49f80cb4f8'
+
+"""
+To get a 12-digit (any number of choice) secret key, run this in the terminal:
+
+python
+import secrets
+secrets.token_hex(12)
+exit()
+
+Copy the token from the terminal and paste it as the secret key in app.config above
+"""
 
 db = SQLAlchemy(app)
+login_manager = LoginManager(app)
 
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer(), primary_key=True)
     username = db.Column(db.String(255), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
@@ -24,9 +37,13 @@ class User(db.Model):
         return f"User <{self.username}>"
 
 
+@login_manager.user_loader
+def user_loader(id):
+    return User.query.get(int(id))
+
+
 @app.route('/')
 def index():
-    # user = User.query.filter_by('username')
     return render_template('index.html')
 
 
@@ -46,7 +63,14 @@ def login():
 
 @app.route('/logout')
 def logout():
-    return render_template('login.html')
+    logout_user()
+    return redirect(url_for('index'))
+
+
+@app.route('/protected')
+@login_required
+def protected():
+    return render_template('protected.html')
 
 
 @app.route('/signup', methods=['GET', 'POST'])

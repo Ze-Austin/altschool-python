@@ -32,6 +32,7 @@ header a {
   margin: 10px;
   color: floralwhite;
   text-decoration: none;
+  white-space: nowrap;
 }
 header a:hover {
   color: darkgray;
@@ -59,14 +60,14 @@ label {
 .form-group {
   margin-bottom: 15px;
 }
-.mybtn {
+.button {
   background-color: midnightblue;
   max-width: fit-content;
   color: floralwhite;
   padding: 5px 20px;
   cursor: pointer;
 }
-.mybtn:hover {
+.button:hover {
   background-color: blue;
   transition: 0.3s;
 }
