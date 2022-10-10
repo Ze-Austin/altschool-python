@@ -12,6 +12,8 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
+db.init_app(app)
+
 class Todo(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     title = db.Column(db.String(100))
