@@ -14,7 +14,7 @@ Base = declarative_base()
         id int
         content str
         date_added datetime
-        is_complete Boolean
+        is_completed Boolean
 """
 
 class Task(Base):
