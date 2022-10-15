@@ -1,0 +1,5 @@
+[console_scripts]
+apiflask = flask.cli:main
+
+[flask.commands]
+spec = apiflask.commands:spec_command
