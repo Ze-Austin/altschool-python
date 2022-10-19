@@ -65,7 +65,7 @@ def update_task(task_id, data):
 
     return task_to_update
 
-@app.delete("/task/<int:task_id>")
+@app.delete("/tasks/<int:task_id>")
 def delete_task(task_id):
     task_to_delete = session.query(Task).filter_by(id=task_id).first()
 
