@@ -39,7 +39,7 @@ def create_task(data):
 
     return new_task, 201
 
-@app.get('/task/<int:task_id>')
+@app.get('/tasks/<int:task_id>')
 @app.output(TaskOutputSchema)
 def get_task_by_id(task_id):
     task = session.query(Task).filter_by(id=task_id).first()
@@ -47,9 +47,9 @@ def get_task_by_id(task_id):
     if task is not None:
         return task, 200
     
-    abort(404)
+    abort(404, "You do not have any task here")
 
-@app.put('/task/<int:task_id>')
+@app.put('/tasks/<int:task_id>')
 @app.input(TaskUpdateSchema)
 @app.output(TaskOutputSchema)
 def update_task(task_id, data):
@@ -73,4 +73,4 @@ def delete_task(task_id):
 
     session.commit()
 
-    return {"message": "Deleted"}, 204
+    abort(201, "Deleted")
