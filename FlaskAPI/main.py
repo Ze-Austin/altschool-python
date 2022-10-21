@@ -74,4 +74,4 @@ def delete_task(task_id):
 
     session.commit()
 
-    return({"message": "Deleted"}, 204)
+    return({"message": "Deleted"}, 200)
