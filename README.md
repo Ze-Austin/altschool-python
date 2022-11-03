@@ -17,7 +17,7 @@
   
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./Images/AltSchool_DarkLogo.svg">
-    <img alt="AltSchool Logo" src="./Images/AltSchool_LightLogo.svg" width="45%" height="15%">
+    <img alt="AltSchool Logo" src="./Images/AltSchool_LightLogo.svg" width="75%" height="25%">
   </picture>
 
   <p align="center">
