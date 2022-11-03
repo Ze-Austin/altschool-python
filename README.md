@@ -175,9 +175,9 @@ This project was made possible by:
 ---
 
 <!-- Outro -->
-## Thanks for dropping by. Have fun! :purple_heart:
-
----
+<h1 align="center">
+  Thanks for dropping by. Have fun! 💜
+</h1>
 
 <!-- Markdown Links & Images -->
 [contributors-shield]: https://img.shields.io/github/contributors/Ze-Austin/altschool-python.svg?style=for-the-badge
