@@ -47,7 +47,7 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
-  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+  <p align="right"><a href="#readme-top">back to top</a></p>
 </details>
 
 ---
@@ -62,7 +62,7 @@
 
 This is a repository containing all notes and files created while learning Backend Development with Python (Flask) at [AltSchool Africa](https://altschoolafrica.com/schools/engineering).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ### Built With:
 
@@ -73,7 +73,7 @@ This is a repository containing all notes and files created while learning Backe
 ![CSS3][css3]
 ![SQLite][sqlite]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ---
 
@@ -132,7 +132,27 @@ If you like this structure and want to use it for your own notes or just go thro
 
 **Please don't send pull requests**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+---
+
+<!-- License -->
+## License
+
+Distributed under the MIT License. See <a href="https://github.com/Ze-Austin/ze-blog/blob/main/LICENSE">LICENSE</a> for more information.
+
+<p align="right"><a href="#readme-top">back to top</a></p>
+
+---
+
+<!-- Contact -->
+## Contact
+
+Dr Austin Wopara - [@Ze_Austin](https://twitter.com/Ze_Austin) - austinwopara@gmail.com
+
+Project Link: [AltSchool Python](https://github.com/Ze-Austin/altschool-python)
+
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ---
 
@@ -142,22 +162,20 @@ If you like this structure and want to use it for your own notes or just go thro
 This project was made possible by:
 
 * [AltSchool Africa School of Engineering](https://altschoolafrica.com/schools/engineering)
-* [Caleb Emelike's Python Classes](https://github.com/CalebEmelike)
-* [Kehinde Ogunyale's Python Lectures](https://kennyrich.github.io/)
+* [Caleb Emelike's Python Classes at AltSchool](https://github.com/CalebEmelike)
+* [Kehinde Ogunyale's Python Lectures at AltSchool](https://kennyrich.github.io/)
 * [GitHub Student Pack](https://education.github.com/globalcampus/student)
 * [Othneil's README Template](https://github.com/othneildrew/Best-README-Template)
 * [Ileriayo's Markdown Badges](https://github.com/Ileriayo/markdown-badges)
 * [Stefan's GitHub Light vs Dark Demo](https://www.stefanjudis.com/notes/how-to-define-dark-light-mode-images-in-github-markdown/)
 * [Stack Overflow](https://stackoverflow.com/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right"><a href="#readme-top">back to top</a></p>
 
 ---
 
 <!-- Outro -->
 ## Thanks for dropping by. Have fun! :purple_heart:
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
