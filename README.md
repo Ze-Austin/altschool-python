@@ -82,7 +82,7 @@ This is a repository containing all notes and files created while learning Backe
 
 If you like this structure and want to use it for your own notes or just go through for tips and practice, follow these steps: 
 
-1. Fork the original repo on GitHub
+1. Fork [the original repo](https://github.com/Ze-Austin/altschool-python) on GitHub
 2. In your terminal, cd into the folder you use for AltSchool or Programming on your computer:  
     eg: `cd ~/AltSchool`
 3. Clone the repo from your personal GitHub into the folder:  
