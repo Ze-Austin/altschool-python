@@ -57,12 +57,12 @@
   Hello and Welcome! 👋🏾
 </h1>
 
+---
+
 <!-- About The Project -->
 ## About This Project
 
 This is a repository containing all notes and files created while learning Backend Development with Python (Flask) at [AltSchool Africa](https://altschoolafrica.com/schools/engineering).
-
-<p align="right"><a href="#readme-top">back to top</a></p>
 
 ### Built With:
 
@@ -178,6 +178,8 @@ This project was made possible by:
 <h1 align="center">
   Thanks for dropping by. Have fun! 💜
 </h1>
+
+---
 
 <!-- Markdown Links & Images -->
 [contributors-shield]: https://img.shields.io/github/contributors/Ze-Austin/altschool-python.svg?style=for-the-badge
