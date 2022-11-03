@@ -16,8 +16,8 @@
 <div align="center">
   
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./AltSchool_DarkLogo.svg">
-    <img alt="AltSchool Logo" src="./AltSchool_LightLogo.svg" width="75%" height="25%">
+    <source media="(prefers-color-scheme: dark)" srcset="./Images/AltSchool_DarkLogo.svg">
+    <img alt="AltSchool Logo" src="./Images/AltSchool_LightLogo.svg" width="45%" height="15%">
   </picture>
 
   <p align="center">
@@ -128,7 +128,7 @@ If you like this structure and want to use it for your own notes or just go thro
 
 **Timeline:** I usually update this repo some hours after the latest class, and then announce on Slack. Caleb's (and any other Python tutor's) folder will be updated when we get the files on Slack.
 
-**Bonus:** There's a Git Cheat Sheet file in here. It helps with reminders and explanations of Git commands in the Terminal. Further explanation can be found online.
+**Bonus:** There's a Git Cheat Sheet [file](./Images/Git%20Cheat%20Sheet.jpeg) in here. It helps with reminders and explanations of Git commands in the Terminal. Further explanation can be found online.
 
 **Please don't send pull requests**
 
