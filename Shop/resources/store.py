@@ -43,3 +43,14 @@ class StoreList(MethodView):
             abort(500, message="An error occured while creating the store")
 
         return store, 201
+
+        # store = StoreModel()
+        # store = store_data
+
+        # if store: 
+        #     abort(400, message="Store Exists")
+
+        # db.session.add(store)
+        # db.session.commit()
+
+        # return store, 201
