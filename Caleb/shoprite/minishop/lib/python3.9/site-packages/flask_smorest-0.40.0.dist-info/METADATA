@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: flask-smorest
+Version: 0.40.0
+Summary: Flask/Marshmallow-based REST API framework
+Home-page: https://github.com/marshmallow-code/flask-smorest
+Author: Jérôme Lafréchoux
+Author-email: jerome@jolimont.fr
+License: MIT
+Keywords: REST,openapi,swagger,flask,marshmallow,apispec,webargs
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Flask
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.7
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: werkzeug (<3,>=2.0)
+Requires-Dist: flask (<3,>=2.0)
+Requires-Dist: marshmallow (<4,>=3.18.0)
+Requires-Dist: webargs (<9,>=8.0.0)
+Requires-Dist: apispec[marshmallow] (<7,>=6.0.0)
+Provides-Extra: dev
+Requires-Dist: pytest (==7.1.3) ; extra == 'dev'
+Requires-Dist: pytest-cov (==4.0.0) ; extra == 'dev'
+Requires-Dist: coverage (==6.5.0) ; extra == 'dev'
+Requires-Dist: werkzeug (==2.2.2) ; extra == 'dev'
+Requires-Dist: flask (==2.2.2) ; extra == 'dev'
+Requires-Dist: marshmallow (==3.18.0) ; extra == 'dev'
+Requires-Dist: webargs (==8.2.0) ; extra == 'dev'
+Requires-Dist: apispec (==6.0.0) ; extra == 'dev'
+Requires-Dist: PyYAML (==6.0) ; extra == 'dev'
+Requires-Dist: flake8 (==5.0.4) ; extra == 'dev'
+Requires-Dist: flake8-bugbear (==22.9.23) ; extra == 'dev'
+Requires-Dist: pre-commit (==2.20.0) ; extra == 'dev'
+Provides-Extra: lint
+Requires-Dist: flake8 (==5.0.4) ; extra == 'lint'
+Requires-Dist: flake8-bugbear (==22.9.23) ; extra == 'lint'
+Requires-Dist: pre-commit (==2.20.0) ; extra == 'lint'
+Provides-Extra: tests
+Requires-Dist: pytest (==7.1.3) ; extra == 'tests'
+Requires-Dist: pytest-cov (==4.0.0) ; extra == 'tests'
+Requires-Dist: coverage (==6.5.0) ; extra == 'tests'
+Requires-Dist: werkzeug (==2.2.2) ; extra == 'tests'
+Requires-Dist: flask (==2.2.2) ; extra == 'tests'
+Requires-Dist: marshmallow (==3.18.0) ; extra == 'tests'
+Requires-Dist: webargs (==8.2.0) ; extra == 'tests'
+Requires-Dist: apispec (==6.0.0) ; extra == 'tests'
+Requires-Dist: PyYAML (==6.0) ; extra == 'tests'
+
+=============
+flask-smorest 
+=============
+
+.. image:: https://img.shields.io/pypi/v/flask-smorest.svg
+    :target: https://pypi.org/project/flask-smorest/
+    :alt: Latest version
+
+.. image:: https://img.shields.io/pypi/pyversions/flask-smorest.svg
+    :target: https://pypi.org/project/flask-smorest/
+    :alt: Python versions
+
+.. image:: https://img.shields.io/badge/marshmallow-3-blue.svg
+    :target: https://marshmallow.readthedocs.io/en/latest/upgrading.html
+    :alt: marshmallow 3 only
+
+.. image:: https://img.shields.io/badge/OAS-2%20|%203-green.svg
+    :target: https://github.com/OAI/OpenAPI-Specification
+    :alt: OpenAPI Specification 2/3 compatible
+
+.. image:: https://img.shields.io/pypi/l/flask-smorest.svg
+    :target: https://flask-smorest.readthedocs.io/en/latest/license.html
+    :alt: License
+
+.. image:: https://github.com/marshmallow-code/flask-smorest/actions/workflows/build-release.yml/badge.svg
+    :target: https://github.com/marshmallow-code/flask-smorest/actions?query=workflow%3Abuild
+    :alt: Build status
+
+.. image:: https://codecov.io/gh/marshmallow-code/flask-smorest/branch/master/graph/badge.svg?token=F676tOSaLF
+    :target: https://codecov.io/gh/marshmallow-code/flask-smorest
+    :alt: Code coverage
+
+.. image:: https://readthedocs.org/projects/flask-smorest/badge/
+    :target: http://flask-smorest.readthedocs.io/
+    :alt: Documentation
+
+'cause everybody wants s'more
+=============================
+
+**flask-smorest** (formerly known as flask-rest-api) is a REST API framework
+built upon `Flask <https://palletsprojects.com/p/flask/>`_ and
+`marshmallow <https://github.com/marshmallow-code/marshmallow>`_.
+
+- Serialization, deserialization and validation using marshmallow ``Schema``
+- Explicit validation error messages returned in response
+- Database-agnostic
+- OpenAPI (Swagger) specification automatically generated and exposed with
+  `ReDoc <https://github.com/Rebilly/ReDoc>`_,
+  `Swagger UI <https://swagger.io/tools/swagger-ui/>`_ or
+  `RapiDoc <https://mrin9.github.io/RapiDoc/>`_
+- Pagination
+- ETag
+
+Install
+=======
+
+::
+
+    pip install flask-smorest
+
+Documentation
+=============
+
+Full documentation is available at http://flask-smorest.readthedocs.io/.
+
+Support flask-smorest
+======================
+
+If you'd like to support the future of the project, please consider
+contributing to marshmallow's Open Collective:
+
+.. image:: https://opencollective.com/marshmallow/donate/button.png
+    :target: https://opencollective.com/marshmallow
+    :width: 200
+    :alt: Donate to our collective
+
+License
+=======
+
+MIT licensed. See the `LICENSE <https://github.com/marshmallow-code/flask-smorest/blob/master/LICENSE>`_ file for more details.

@@ -48,7 +48,7 @@ def get_task_by_id(task_id):
     if task is not None:
         return task, 200
     
-    abort(404)
+    abort(404, "You do not have any task here")
 
 @app.put('/tasks/<int:task_id>')
 @app.input(TaskUpdateSchema)
@@ -74,4 +74,4 @@ def delete_task(task_id):
 
     session.commit()
 
-    return {"message": "Deleted"}, 204
+    return({"message": "Deleted"}, 200)
