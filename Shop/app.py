@@ -6,6 +6,7 @@ from db import db
 from resources.store import blp as StoreBlueprint
 from resources.item import blp as ItemBlueprint
 from resources.user import blp as UserBlueprint
+from datetime import timedelta
 
 def create_app(db_url=None):
     app = Flask(__name__)
@@ -23,6 +24,8 @@ def create_app(db_url=None):
     api = Api(app)
 
     app.config["JWT_SECRET_KEY"] = "veryrandomstuff"
+    app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
+    app.config["JWT_REFRESH_TOKEN_EXPIRES"] = timedelta(days=30)
     jwt = JWTManager(app)
 
     @app.before_first_request
