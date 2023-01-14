@@ -8,5 +8,6 @@ Jinja2==3.1.2
 jsonschema==4.17.3
 MarkupSafe==2.1.1
 pyrsistent==0.19.3
+python-decouple==3.7
 pytz==2022.7
 Werkzeug==2.2.2
