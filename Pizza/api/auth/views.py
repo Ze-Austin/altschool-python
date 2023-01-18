@@ -1,6 +1,15 @@
-from flask_restx import Namespace, Resource
+from flask_restx import Namespace, Resource, fields
 
 auth_namespace = Namespace('Auth', description='Namespace for Authentication')
+
+auth_model = auth_namespace.model(
+    'User', {
+        'id': fields.Integer(),
+        'username': fields.String(required=True, description="A username"),
+        'email': fields.String(required=True, description="An email"),
+        'password': fields.String(required=True, description="A password")
+    }
+)
 
 @auth_namespace.route('/signup')
 class SignUp(Resource):
