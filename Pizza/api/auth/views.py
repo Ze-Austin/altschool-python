@@ -3,7 +3,7 @@ from flask_restx import Namespace, Resource, fields
 from ..models.users import User
 from werkzeug.security import generate_password_hash, check_password_hash
 from http import HTTPStatus
-from flask_jwt_extended import create_access_token, create_refresh_token
+from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt_identity
 
 auth_namespace = Namespace('Auth', description='Namespace for Authentication')
 
@@ -42,7 +42,7 @@ class SignUp(Resource):
     @auth_namespace.marshal_with(user_model)
     def post(self):
         """
-            Register a user 
+            Register a User 
         """
 
         data = request.get_json()
@@ -83,3 +83,15 @@ class Login(Resource):
             }
 
             return response, HTTPStatus.CREATED
+
+
+@auth_namespace.route('/refresh')
+class Refresh(Resource):
+    @jwt_required(refresh=True)
+    def post(self):
+        """
+            Generate Refresh Token
+        """
+        username = get_jwt_identity()
+
+        return {'username': username}
