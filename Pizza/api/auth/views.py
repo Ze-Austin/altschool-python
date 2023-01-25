@@ -10,7 +10,6 @@ auth_namespace = Namespace('Auth', description='Namespace for Authentication')
 
 signup_model = auth_namespace.model(
     'Signup', {
-        'id': fields.Integer(),
         'username': fields.String(required=True, description="A username"),
         'email': fields.String(required=True, description="An email"),
         'password': fields.String(required=True, description="A password")
