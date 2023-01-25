@@ -94,4 +94,6 @@ class Refresh(Resource):
         """
         username = get_jwt_identity()
 
-        return {'username': username}
+        access_token = create_access_token(identity=username)
+
+        return {'access_token': access_token}, HTTPStatus.OK
