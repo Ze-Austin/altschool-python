@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from http import HTTPStatus
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt_identity
 
-auth_namespace = Namespace('Auth', description='Namespace for Authentication')
+auth_namespace = Namespace('auth', description='Namespace for Authentication')
 
 
 signup_model = auth_namespace.model(

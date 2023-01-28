@@ -4,12 +4,12 @@ from ..models.users import User
 from http import HTTPStatus
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
-order_namespace = Namespace('Order', description='Namespace for Order')
+order_namespace = Namespace('orders', description='Namespace for Orders')
 
 order_model = order_namespace.model(
     'Order', {
         'flavour': fields.String(description='Pizza Flavour', required=True),
-        'quantity': fields.Integer(description='Number of Pizzas', required=True),
+        'quantity': fields.Integer(description='Number of Pizzas'),
         'size': fields.String(description='Pizza Size', required=True,
             enum = ['SMALL', 'MEDIUM', 'LARGE', 'EXTRA_LARGE']
         ),
@@ -42,7 +42,7 @@ class OrderGetCreate(Resource):
 
         username = get_jwt_identity()
 
-        current_user = User.query.filter_by(username=username).first
+        current_user = User.query.filter_by(username=username).first()
 
         data = order_namespace.payload
 
@@ -63,7 +63,7 @@ class OrderGetCreate(Resource):
 class GetUpdateDelete(Resource):
 
     @order_namespace.marshal_with(order_model)
-    @jwt_required
+    @jwt_required()
     def get(self, order_id):
         """
             Retrieve an Order by ID
