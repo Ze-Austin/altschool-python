@@ -8,6 +8,7 @@ order_namespace = Namespace('orders', description='Namespace for Orders')
 
 order_model = order_namespace.model(
     'Order', {
+        'id': fields.Integer(description='Order ID'),
         'flavour': fields.String(description='Pizza Flavour', required=True),
         'quantity': fields.Integer(description='Number of Pizzas'),
         'size': fields.String(description='Pizza Size', required=True,
@@ -94,11 +95,18 @@ class GetSpecificOrderByUser(Resource):
 
 @order_namespace.route('/user/<int:user_id>/orders')
 class UserOrders(Resource):
-    def get(self):
+
+    @order_namespace.marshal_list_with(order_model)
+    @jwt_required()
+    def get(self, user_id):
         """
             Get All Orders by a User
         """
-        pass
+        user = User.get_by_id(user_id)
+
+        orders = user.orders
+
+        return orders, HTTPStatus.OK
 
 @order_namespace.route('/order/status/<int:order_id>')
 class UpdateOrderStatus(Resource):
