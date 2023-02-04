@@ -1,6 +1,7 @@
 from flask_restx import Namespace, Resource, fields
 from ..models.orders import Order
 from ..models.users import User
+from ..utils import db
 from http import HTTPStatus
 from flask_jwt_extended import jwt_required, get_jwt_identity
 
@@ -73,11 +74,24 @@ class GetUpdateDelete(Resource):
 
         return order, HTTPStatus.OK
 
+    @order_namespace.expect(order_model)
+    @order_namespace.marshal_with(order_model)
+    @jwt_required()
     def put(self, order_id):
         """
             Update an Order by ID
         """
-        pass
+        order_to_update = Order.get_by_id(order_id)
+
+        data = order_namespace.payload
+
+        order_to_update.flavour = data["flavour"]
+        order_to_update.quantity = data["quantity"]
+        order_to_update.size = data["size"]
+
+        db.session.commit()
+
+        return order_to_update, HTTPStatus.OK
 
     def delete(self, order_id):
         """
