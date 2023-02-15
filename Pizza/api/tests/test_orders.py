@@ -54,3 +54,19 @@ class OrderTestCase(unittest.TestCase):
         assert len(orders) == 1
 
         assert response.json['size'] == 'Sizes.SMALL'
+
+    # Function to test the retrieval of a single order
+    def test_get_single_order(self):
+        token = create_access_token(identity="Test User")
+
+        headers = {
+            "Authorization": f"Bearer {token}"
+        }
+
+        order = Order.query.get_or_404(1)
+
+        response = self.client.get('orders/order/1', headers=headers)
+
+        assert response.json == []
+
+        # assert response.status_code == 201
