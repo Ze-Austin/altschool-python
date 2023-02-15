@@ -4,6 +4,7 @@ from ..config.config import config_dict
 from ..utils import db
 from flask_jwt_extended import create_access_token
 from ..models.orders import Order
+import reverse
 
 class OrderTestCase(unittest.TestCase):
     def setUp(self):
@@ -49,11 +50,15 @@ class OrderTestCase(unittest.TestCase):
 
         assert response.status_code == 201
 
-        orders = Order.query.all()
-
         assert len(orders) == 1
 
         assert response.json['size'] == 'Sizes.SMALL'
+
+        orders = Order.query.all()
+
+        order_id = orders[0].id
+
+        assert order_id == 1
 
     # Function to test the retrieval of a single order
     def test_get_single_order(self):
@@ -63,10 +68,6 @@ class OrderTestCase(unittest.TestCase):
             "Authorization": f"Bearer {token}"
         }
 
-        order = Order.query.get_or_404(1)
+        response = self.client.get('/orders/order/1', headers=headers)
 
-        response = self.client.get('orders/order/1', headers=headers)
-
-        assert response.json == []
-
-        # assert response.status_code == 201
+        assert response.status_code == 404
