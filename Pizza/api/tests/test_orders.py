@@ -32,25 +32,25 @@ class OrderTestCase(unittest.TestCase):
 
         assert response.json == []
 
-    def test_order_placement(self):
+    def test_place_order(self):
+        data = {
+            "size": "SMALL",
+            "quantity": 1,
+            "flavour": "Pepperoni"
+        }
+
         token = create_access_token(identity="Test User")
 
         headers = {
             "Authorization": f"Bearer {token}"
         }
 
-        data = {
-            "size": "MEDIUM",
-            "quantity": 1,
-            "flavour": "BBQ Chicken"
-        }
-
         response = self.client.post('/orders/orders', json=data, headers=headers)
 
-        order = Order.query.filter_by(id=1).first()
-
-        assert order.flavour == "BBQ Chicken"
-
-        assert order.quantity == 1
-
         assert response.status_code == 201
+
+        orders = Order.query.all()
+
+        assert len(orders) == 1
+
+        assert response.json['size'] == 'Sizes.SMALL'
