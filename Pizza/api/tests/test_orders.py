@@ -61,6 +61,14 @@ class OrderTestCase(unittest.TestCase):
 
     # Function to test the retrieval of a single order
     def test_get_single_order(self):
+        order = Order(
+            size = "SMALL",
+            quantity = 1,
+            flavour = "Pepperoni"
+        )
+        
+        order.save()
+
         token = create_access_token(identity="Test User")
 
         headers = {
@@ -69,4 +77,4 @@ class OrderTestCase(unittest.TestCase):
 
         response = self.client.get('/orders/order/1', headers=headers)
 
-        assert response.status_code == 404
+        assert response.status_code == 200
