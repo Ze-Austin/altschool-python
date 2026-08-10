@@ -1,3 +1,5 @@
+
+
 <!-- Back to Top Navigation Anchor -->
 <a name="readme-top"></a>
 
@@ -189,7 +191,7 @@ This project was made possible by:
 [stars-shield]: https://img.shields.io/github/stars/Ze-Austin/altschool-python.svg?style=for-the-badge
 [stars-url]: https://github.com/Ze-Austin/altschool-python/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Ze-Austin/altschool-python.svg?style=for-the-badge
-[issues-url]: https://github.com/Ze-Austin/altschool-pythonissues
+[issues-url]: https://github.com/Ze-Austin/altschool-python/issues
 [license-shield]: https://img.shields.io/github/license/Ze-Austin/altschool-python.svg?style=for-the-badge
 [license-url]: https://github.com/Ze-Austin/altschool-python/blob/main/LICENSE
 [twitter-shield]: https://img.shields.io/badge/-@ze_austin-1ca0f1?style=for-the-badge&logo=twitter&logoColor=white&link=https://twitter.com/ze_austin
